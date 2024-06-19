@@ -4,6 +4,8 @@ from .extensions import db
 from .routes import main
 from config import Config
 
+#fffff
+
 def create_app():
     app = Flask(__name__)
 
