@@ -1,0 +1,4 @@
+Flask==2.2.2
+gunicorn
+sqlalchemy==1.4.18
+psycopg2-binary
