@@ -4,8 +4,6 @@ from .extensions import db
 from .routes import main
 from config import Config
 
-#fffff
-
 def create_app():
     app = Flask(__name__)
 
@@ -15,5 +13,13 @@ def create_app():
 
     db.init_app(app)
     app.register_blueprint(main)
+
+    with app.app_context():
+        try:
+            db.create_all()
+            print("PostgreSQL に接続成功しました！")
+        except Exception as e:
+            print(f"PostgreSQL への接続中にエラーが発生しました: {e}")
+
 
     return app
