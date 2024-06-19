@@ -15,3 +15,8 @@ def create_app():
     app.register_blueprint(main)
 
     return app
+
+application = create_app()
+
+if __name__ == "__main__":
+    application.run()
